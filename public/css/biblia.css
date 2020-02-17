@@ -1,0 +1,59 @@
+body {padding: 2px; margin: 0px; background: grey;}
+
+.contenedor {background: rgba(200,200,200,.7); width: 410px; height: 650px; border: 1px groove silver; border-radius: 5px; padding: 2px;  
+	display: flex; flex-direction: column; justify-content: space-between;}
+	.verbiblia {display: flex; justify-content: space-between;background: var(--bg1); padding: 3px; border-radius: 2px;font-family: var(--fuente1);}
+		.cbx_version {display: flex; flex-grow: 1; padding: 1px; background: white; border-radius: 5px; flex-wrap: wrap; height: 30px;}
+			.cbx_span {float: right; position: relative; top: -1px; font-size: 1.2em}
+			.opcion {height: 30px; border: 1px solid silver; border-radius: 5px; width: 100%; margin-bottom: 1px;text-align: left; font-family: var(--fuente1);}
+			.cbx_version .opcion { color: white;}
+			.btn_version {height: 30px; border-radius: 5px; color: white; font-size: .8em;border: 1px solid green; width: 100%}
+			.lst_opcion {  width: 100%; border: 1px solid green; position: relative; z-index: 10; top: 2px; background: var(--bg1); padding: 1px; 
+				border-radius: 5px; display: none;}
+		.cbx_libros {display: flex; flex-grow: 1; padding: 1px; background: white; border-radius: 5px; flex-wrap: wrap; height: 30px; color: black;}
+			.btn_libros {height: 30px; border-radius: 5px; color: white; font-size: .8em;border: 1px solid green; width: 100%; color: black;}
+			.lst_libros{ width: 100%;  overflow-y: scroll; max-height: 464px; border: 1px solid green; position: relative; z-index: 10; top: 2px; background: var(--bg1); padding: 1px; 
+				border-radius: 5px; display: none; }
+			.cbx_libros .opcion { color: black;z-index: 100;}	
+		.estado {padding: 1px; background: white; display: flex; border-radius: 5px; }
+			.verbiblia .estado {margin-left: 3px }
+			.btn_b1, .btn_b2 {height: 100%; border: 1px solid green; font-family: var(--fuente1)}
+			.btn_b1 {border-radius: 5px 0px 0px 5px;}
+			.btn_b2 {border-radius: 0px 5px 5px 0px; margin-left: 1px;}
+	.libros {display: flex; justify-content: space-between;align-items: center; background: var(--bg1); padding: 3px; border-radius: 2px; margin-top: 1px; }
+		.nombre {display: flex; flex-grow: 1; border-radius: 5px 0px 0px 5px; height: 30px;font-family:var(--fuente1); font-size: .9em;}
+		.div_busqueda {margin-left: 3px; padding: 1px; background: white; border-radius: 5px;height: 30px; display: flex; }
+			.cap, .ver {width: 50px; height: 26px; text-align: center; font-family: var(--fuente1); font-size: .8em}
+			.cap {border-radius:  5px 0px 0px 5px; border: 1px solid silver}
+			.ver {border: 1px solid silver; margin-left: -3px}
+			.buscar {margin-left: -3px; border: 1px solid silver;border-radius: 0px 5px 5px 0px; height: 30px; font-family: var(--fuente1) ;font-size: .8em}
+		.buscar:active, .btn_ant:active, .btn_sig:active {opacity: .5;}
+		.libros .estado {margin-left: 3px }
+		.btn_ant, .btn_sig { height: 30px; border: 1px solid green;}
+		.btn_ant {border-radius:  5px 0px 0px 5px;}
+		.btn_sig {margin-left: 1px;border-radius:  0px 5px 5px 0px}
+	.textos {height: 400px; background: var(--bg1); padding: 3px; margin-top: 2px; border-radius: 5px; flex-grow: 1; display: block; overflow-y: scroll;}
+	.textos2 {height: 400px; background: var(--bg1); padding: 3px; margin-top: 2px; border-radius: 5px; flex-grow: 1; display: none; overflow-y: scroll;}
+		.oc_span {float: right; }
+		.leyenda {font-weight: bold;}
+		.tx {width: 100%; border: 1px solid black; border-radius: 3px; padding: 2px; text-align: left; font-family: var(--fuente2); font-size: .9em; margin-bottom: 1px;}
+		.tx:focus {background: var(--bg3);}
+	.busq {margin-top: 2px; background: var(--bg1); height: 30px; padding: 3px; border-radius: 5px; display: flex; 
+		justify-content: space-between;align-items: center;}
+		.txt_busq {display: flex; flex-grow: 1; height: 28px; border-radius: 5px; border: 1px solid green; text-align: center}
+		.busq .estado {margin-left: 2px}
+		.btn_buscar, .btn_limpiar {height: 30px; border: 1px solid green; font-family: var(--fuente1);}
+		.btn_buscar {border-radius: 5px 0px 0px 5px;  }
+		.btn_buscar:active, .btn_limpiar:active {opacity: .5;}
+		.btn_limpiar {border-radius: 0px 5px 5px 0px; margin-left: 1px;}
+	.opciones {margin-top: 2px; background: var(--bg1); height: 30px; padding: 4px 3px; border-radius: 5px; display: flex; 
+			align-items: center; justify-content: space-between}
+			.opciones .estado {height: 30px;}
+			.btn_quitar, .btn_imagen {border: 1px solid green; font-size: 100%; width: 35px}
+			.btn_quitar:active, .btn_imagen:active {opacity: .5;}
+			.btn_quitar, .btn_play {border-radius:  5px 0px 0px 5px; }
+			.btn_imagen, .btn_check {border-radius:  0px 5px 5px 0px; margin-left: 1px;}
+			.btn_play, .btn_pause, .btn_video, .btn_check {border: 1px solid green; font-size: 100%; width: 35px}
+			.btn_play:active, .btn_pause:active, .btn_video:active, .btn_check:active {opacity: .5;}
+            .btn_pause, .btn_video, .cbx_video {margin-left: 1px;}
+            .cbx_video {border: 1px solid green;font-family: 'Oswald', sans-serif; }

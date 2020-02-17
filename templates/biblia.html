@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biblia</title>
+	<link rel="stylesheet" href="/public/css/themes.css">
+	<link rel="stylesheet" href="/public/css/biblia.css">
+	<link  rel="shortcut icon" href="/public/img/icon.ico">
+	<link rel="stylesheet" href="/public/css/all.css">
+	<script src="/public/js/jquery.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+	
+</head>
+<body>
+	<div class="contenedor">
+		<div class="verbiblia">
+			<div class="cbx_version">
+				<button class="btn_version th1">Reina Valera 1960<span class="cbx_span far fa-arrow-alt-circle-down"></span></button>
+				<div class="lst_opcion view_version">
+					<button class="opcion op_version th1">Reina Valera 1960</span></button>
+					<button class="opcion op_version th1">Reina Valera Contemporanea</button>
+					<button class="opcion op_version th1">Biblia al Día</button>
+					<button class="opcion op_version th1">Biblia Lenguaje Sencillo</button>
+					<button class="opcion op_version th1">Nueva Traducción Viviente</button>
+				</div>
+			</div>
+			
+
+			<div class="estado">
+				<button class="btn_b1 th3">Biblia1</button>
+				<button class="btn_b2 th2">Biblia2</button>
+			</div>
+		</div>
+		<div class="libros">
+			<div class="cbx_libros">
+				<button class="btn_libros th2">Génesis<span class="cbx_span far fa-arrow-alt-circle-down"></span></button>
+				<div class="lst_libros view_libros">
+					
+				</div> 
+			</div>
+			<div class="div_busqueda">
+				<input type="text" class="cap" value="1" placeholder="cap">
+				<input type="text" class="ver" value="1" placeholder="ver">
+				<button class="buscar th2">Buscar</button>
+			</div>
+			<div class="estado">
+				<button class="btn_ant th2 fas fa-backward"></button>
+				<button class="btn_sig th2 fas fa-forward "></button>
+			</div>
+		</div>
+
+		<div class="textos"></div>
+		<div class="textos2"></div>
+		
+		<div class="busq">
+			<input type="text" class="txt_busq" placeholder="texto a buscar">
+			<div class="estado">
+				<button class="btn_buscar th2">Buscar</button>
+				<button class="btn_limpiar th2">Limpiar</button>
+			</div>
+		</div>
+		<div class="opciones">
+			<div class="estado">
+				<button class="btn_quitar th3 fas fa-tv"></button>
+				<button class="btn_imagen th3 fas fa-image"></button>
+			</div>
+			<div class="estado">
+					<button class="btn_play th3 far fa-play-circle"></button>
+					<button class="btn_pause th3 far fa-pause-circle"></button>
+				    <button class="btn_video th3 fas fa-video"></button>
+					<select class="cbx_video th3">
+							{{range .Videos}}
+   								<option value="rv1960">{{.}}</option>
+							{{end}}
+							
+					</select>
+					<button class="btn_check th3 spinner far fa-check-circle"></button>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<script src="/public/js/biblia.js"></script>
+</body>
+</html>
